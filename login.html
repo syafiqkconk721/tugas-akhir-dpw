@@ -1,0 +1,51 @@
+<html>
+	<head>
+		<title>Login as Admin</title>
+		<link rel="stylesheet" href="style7.css">
+	</head>
+	
+	<body>
+		<script language="javascript">
+			function masuk()
+			{
+				var user=document.form1.username.value;
+				var pass=document.form1.password.value;
+			
+				if(user=="" && pass=="")
+				{
+					alert("Data Tidak Boleh Kosong");
+				}
+				else if(user=="")
+				{
+					alert("Username Tidak Boleh Kosong");
+				}
+				else if(pass=="")
+				{
+					alert("Password Tidak Boleh Kosong");
+				}
+				else if(user=="syafiq" && pass=="ganteng123")
+				{
+					window.location.href="IDEas7.html";
+				}
+				else
+				{
+					alert("Anda Salah Memasukkan Data");
+					document.form1.username.value="";
+					document.form1.password.value="";
+				}
+			}
+		</script>
+		
+		<div class="login-page">
+			<div class="form">
+				<form class="login-form" name="form1">
+					<h1>Login</h1>
+					<input type="text" name="username" placeholder="Masukkan Username" />
+					<input type="password" name="password" placeholder="Masukkan Password" />
+					<input type="button" name="button" value="masuk" onclick="masuk()" />					
+				</form>
+			</div>
+		</div>
+		
+	</body>
+</html>
